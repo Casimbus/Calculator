@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        body {
+            background: #2e2e2e;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+        .display {
+            background: #000;
+            color: #0f0;
+            font-size: 28px;
+            text-align: right;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            min-height: 40px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 80px);
+            gap: 10px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+
+        button:not(.op):not(.special) {
+            background: #eee;
+        }
+
+        button.op {
+            background: #ff9800;
+            color: white;
+        }
+
+
+        button.special {
+            background: #f44336;
+            color: white;
+        }
+
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="buttons">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button class="op">+</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button class="op">-</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button class="op">*</button>
+    <button>0</button>
+    <button class="op">=</button>
+    <button class="op">/</button>
+    <button class="special">C</button>
+    <button class="special">CE</button>
+    </div>
+    <div id="display" class="display">
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
